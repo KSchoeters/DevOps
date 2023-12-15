@@ -4,7 +4,7 @@ WORKDIR /app
 EXPOSE 80
 
 # Copy the published application to the /app directory in the container
-COPY bin/Release/netcoreapp3.1/publish/ .
+COPY . .
 
 # Define the command to run your application
 ENTRYPOINT ["dotnet", "Vacation.dll"]
