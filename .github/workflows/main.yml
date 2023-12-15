@@ -21,6 +21,11 @@ jobs:
     - name: Build the ASP.NET application
       run: dotnet build --configuration Release
 
+    - name: Debug Docker credentials
+      run: |
+        echo "DOCKER_USERNAME: $DOCKER_USERNAME"
+        echo "DOCKER_PASSWORD: $DOCKER_PASSWORD
+
     - name: Publish Docker image
       uses: docker/build-push-action@v2.7.0
       with:
