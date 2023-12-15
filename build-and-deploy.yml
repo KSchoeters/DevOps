@@ -28,7 +28,7 @@ jobs:
         file: ./Dockerfile  # Path to your Dockerfile
         platforms: linux/amd64
         push: true
-        tags: your-docker-username/your-app-name:latest
+        tags: kobeschoeters/devops:latest
       env:
         DOCKER_USERNAME: ${{ secrets.kobeschoeters }}
         DOCKER_PASSWORD: ${{ secrets.THMg2022!}}
