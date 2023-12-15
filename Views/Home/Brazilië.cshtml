@@ -1,0 +1,17 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<Destination>
+
+@{
+    ViewData["Title"] = "Brazilië";
+}
+
+@foreach (var location in Model) {
+    if (@location.Name == "Brazilië"){
+        <br>
+        <h2>@location.Name</h2>
+        <br>
+        <p>@location.Description</p>
+        <br>
+    }
+}
