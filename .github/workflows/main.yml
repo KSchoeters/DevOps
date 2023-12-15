@@ -21,6 +21,9 @@ jobs:
     - name: Build the ASP.NET application
       run: dotnet build --configuration Release
 
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
     - name: Publish Docker image
       uses: docker/build-push-action@v2.7.0
       with:
@@ -32,3 +35,6 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Log out from Docker Hub
+      run: docker logout
