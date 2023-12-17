@@ -6,5 +6,3 @@ EXPOSE 80
 # Copy the published application to the /app directory in the container
 COPY . .
 
-# Define the command to run your application
-ENTRYPOINT ["dotnet", "Vacation.dll"]
