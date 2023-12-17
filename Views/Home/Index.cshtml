@@ -9,7 +9,7 @@
 @foreach (var location in Model) {
     <h2>@location.Name</h2>
     <p>@location.Description</p>
-    <img src="@location.Image.File.Url" width="500"/>
+    <img src="@location.Image?.File.Url" width="500"/>
     <h3>Review</h3>
     <p class="bold">@location.ReviewName</p>
     <p class="bold">Rating: @location.Rating/5</p>
