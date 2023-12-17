@@ -7,4 +7,4 @@ EXPOSE 80
 COPY . .
 
 # Define the command to run your application
-ENTRYPOINT ["dotnet", "bin\Debug\net6.0\Vacation.dll"]
+ENTRYPOINT ["dotnet", "bin/Debug/net6.0/Vacation.dll"]
