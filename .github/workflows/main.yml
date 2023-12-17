@@ -39,6 +39,3 @@ jobs:
     - name: Log out from Docker Hub
       run: docker logout
       
-    - name: Run ASP.NET application
-      run: dotnet run --project Vacation.csproj
-      timeout-minutes: 7
